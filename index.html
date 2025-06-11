@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaffeTech ☕ Soluções em Tecnologia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5c4033;
+      --accent: #ff6b00;
+      --light: #f9f5f1;
+      --dark: #2f2f2f;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .hero {
+      background: var(--light);
+      color: var(--dark);
+      padding: 150px 20px 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      padding: 80px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-item {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-item i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      color: white !important;
+      text-decoration: underline;
+      background: transparent !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo"><i class="fas fa-mug-hot"></i> KaffeTech</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a class="btn" href="https://kaffetech.com/sistema/login.php">Já é cliente?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Serviços de TI para o seu negócio</h1>
+      <p>Com a KaffeTech, você tem tecnologia, suporte e infraestrutura que funcionam.</p>
+      <a href="#contact" class="btn">Fale Conosco</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>O que fazemos</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <i class="fas fa-tools"></i>
+          <h3>Suporte Técnico</h3>
+          <p>Prestamos atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas, garantindo o funcionamento contínuo do seu ambiente de TI.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-network-wired"></i>
+          <h3>Redes e Infraestrutura</h3>
+          <p>Instalação, cabeamento, roteamento e organização física da rede local e da conexão com a internet. Usamos práticas padronizadas e equipamentos de qualidade para estabilidade e performance.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-server"></i>
+          <h3>Backup e Servidores</h3>
+          <p>Montamos servidores com TrueNAS e Linux, criamos rotinas automáticas de backup e sistemas de alta disponibilidade com Nextcloud e sincronização remota via Cloudflare.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-code"></i>
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p>Desenvolvemos sistemas personalizados como plataformas de chamados, painéis de agendamento, sistemas de bilheteria, PDVs integrados e soluções sob demanda em PHP, JS e MySQL.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-cloud"></i>
+          <h3>Soluções em Nuvem</h3>
+          <p>Implantamos soluções em nuvem para empresas com sincronização automática de arquivos, acesso externo seguro, e integração com serviços como OneDrive, Google Drive e servidores privados.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-video"></i>
+          <h3>Monitoramento</h3>
+          <p>Instalamos câmeras IP com gravação local e visualização em tempo real pela web. Usamos RTSP/HLS/WebRTC e integração com sistemas de segurança locais e remotos, inclusive sem IP fixo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Vamos conversar?</h2>
+    <p>Entre em contato pelo e-mail <a href="mailto:joaovictor@kaffetech.com">joaovictor@kaffetech.com</a> ou mande um WhatsApp para <a href="https://wa.me/5591983302904">(91) 98330-2904</a>.</p>
+    <br>
+    <a href="https://kaffetech.com/sistema/login.php" class="btn">Abrir chamado</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KaffeTech <i class="fas fa-mug-hot"></i> - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
