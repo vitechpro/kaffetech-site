@@ -14,157 +14,30 @@
       --dark: #2f2f2f;
       --transition: all 0.3s ease;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
-    }
-
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-      text-decoration: none;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    nav ul li a:hover {
-      color: var(--accent);
-    }
-
-    .btn {
-      background-color: var(--primary);
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .btn:hover {
-      background-color: var(--accent);
-      color: white;
-    }
-
-    .hero {
-      background: var(--light);
-      color: var(--dark);
-      padding: 150px 20px 100px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .services {
-      padding: 80px 20px;
-      background-color: white;
-      text-align: center;
-    }
-
-    .services h2 {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-      color: var(--primary);
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .service-item {
-      background: var(--light);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .service-item i {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--primary);
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    .cta {
-      background: var(--primary);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .cta a {
-      color: white !important;
-      text-decoration: underline;
-      background: transparent !important;
-    }
+    * {margin: 0;padding: 0;box-sizing: border-box;}
+    body {font-family: 'Poppins', sans-serif;background-color: var(--light);color: var(--dark);}
+    header {background: var(--primary);color: white;padding: 15px 0;box-shadow: 0 2px 6px rgba(0,0,0,0.1);position: fixed;width: 100%;top: 0;z-index: 1000;}
+    .container {width: 90%;max-width: 1200px;margin: 0 auto;}
+    .header-container {display: flex;justify-content: space-between;align-items: center;}
+    .logo {font-size: 1.8rem;font-weight: 700;color: white;text-decoration: none;}
+    nav ul {display: flex;list-style: none;}
+    nav ul li {margin: 0 15px;}
+    nav ul li a {color: white;text-decoration: none;font-weight: 500;transition: var(--transition);}
+    nav ul li a:hover {color: var(--accent);}
+    .btn {background-color: var(--primary);color: white;padding: 10px 20px;border: none;border-radius: 20px;font-weight: 500;text-decoration: none;transition: var(--transition);}
+    .btn:hover {background-color: var(--accent);color: white;}
+    .hero {background: var(--light);color: var(--dark);padding: 150px 20px 100px;text-align: center;}
+    .hero h1 {font-size: 2.6rem;margin-bottom: 20px;}
+    .hero p {font-size: 1.2rem;margin-bottom: 30px;max-width: 800px;margin-left: auto;margin-right: auto;}
+    .services {padding: 80px 20px;background-color: white;text-align: center;}
+    .services h2 {font-size: 2.2rem;margin-bottom: 40px;color: var(--primary);}
+    .service-list {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 30px;}
+    .service-item {background: var(--light);padding: 30px;border-radius: 10px;box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+    .service-item i {font-size: 2rem;margin-bottom: 15px;color: var(--primary);}
+    footer {background: var(--primary);color: white;text-align: center;padding: 40px 20px 20px;}
+    .cta {background: var(--primary);color: white;padding: 60px 20px;text-align: center;}
+    .cta h2 {font-size: 2rem;margin-bottom: 20px;}
+    .cta a {color: white !important;text-decoration: underline;background: transparent !important;}
   </style>
 </head>
 <body>
@@ -184,8 +57,8 @@
 
   <section class="hero" id="home">
     <div class="container">
-      <h1>Serviços de TI para o seu negócio</h1>
-      <p>Com a KaffeTech, você tem tecnologia, suporte e infraestrutura que funcionam.</p>
+      <h1>Suporte de TI completo para sua empresa em Belém</h1>
+      <p>Manutenção de computadores, redes, firewall, câmeras, servidores e muito mais — com atendimento técnico ágil, profissional e próximo de você. Somos especialistas em garantir que sua TI funcione com segurança e estabilidade.</p>
       <a href="#contact" class="btn">Fale Conosco</a>
     </div>
   </section>
@@ -197,32 +70,32 @@
         <div class="service-item">
           <i class="fas fa-tools"></i>
           <h3>Suporte Técnico</h3>
-          <p>Prestamos atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas, garantindo o funcionamento contínuo do seu ambiente de TI.</p>
+          <p>Atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas.</p>
         </div>
         <div class="service-item">
           <i class="fas fa-network-wired"></i>
-          <h3>Redes e Infraestrutura</h3>
-          <p>Instalação, cabeamento, roteamento e organização física da rede local e da conexão com a internet. Usamos práticas padronizadas e equipamentos de qualidade para estabilidade e performance.</p>
-        </div>
-        <div class="service-item">
-          <i class="fas fa-server"></i>
-          <h3>Backup e Servidores</h3>
-          <p>Montamos servidores com TrueNAS e Linux, criamos rotinas automáticas de backup e sistemas de alta disponibilidade com Nextcloud e sincronização remota via Cloudflare.</p>
-        </div>
-        <div class="service-item">
-          <i class="fas fa-code"></i>
-          <h3>Desenvolvimento de Sistemas</h3>
-          <p>Desenvolvemos sistemas personalizados como plataformas de chamados, painéis de agendamento, sistemas de bilheteria, PDVs integrados e soluções sob demanda em PHP, JS e MySQL.</p>
-        </div>
-        <div class="service-item">
-          <i class="fas fa-cloud"></i>
-          <h3>Soluções em Nuvem</h3>
-          <p>Implantamos soluções em nuvem para empresas com sincronização automática de arquivos, acesso externo seguro, e integração com serviços como OneDrive, Google Drive e servidores privados.</p>
+          <h3>Infraestrutura de Redes</h3>
+          <p>Passagem de cabos, roteamento, switchs, racks, firewalls e organização da rede da sua empresa.</p>
         </div>
         <div class="service-item">
           <i class="fas fa-video"></i>
-          <h3>Monitoramento</h3>
-          <p>Instalamos câmeras IP com gravação local e visualização em tempo real pela web. Usamos RTSP/HLS/WebRTC e integração com sistemas de segurança locais e remotos, inclusive sem IP fixo.</p>
+          <h3>Monitoramento e CFTV</h3>
+          <p>Instalação de câmeras IP, gravação local e acesso remoto via navegador, mesmo sem IP fixo.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-server"></i>
+          <h3>Servidores e Backup</h3>
+          <p>Implantação de servidores Linux, backups automáticos, Nextcloud e sincronização via nuvem.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Firewall e Segurança</h3>
+          <p>Configuração e gestão de firewall, proteção de dados e práticas de segurança da informação.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-user-cog"></i>
+          <h3>Gestão de TI</h3>
+          <p>Controle de ativos, suporte estratégico, documentação e acompanhamento técnico da infraestrutura.</p>
         </div>
       </div>
     </div>
