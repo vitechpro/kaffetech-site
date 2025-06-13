@@ -1,145 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KaffeTech ☕ Soluções em TI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #5D4037;
-      --accent: #ff6b00;
-      --light: #f8f4ee;
-      --dark: #2f2f2f;
-      --transition: all 0.3s ease;
-    }
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
-    }
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    header i {
-      margin-right: 10px;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      color: var(--primary);
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 15px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      background-color: var(--primary);
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: var(--transition);
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background-color: var(--accent);
-    }
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .about-text {
-      flex: 1 1 300px;
-    }
-    .about-image {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    svg {
-      max-width: 100%;
-      height: auto;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-      .about-content {
-        flex-direction: column;
-      }
-      h2 {
-        font-size: 1.6rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaffe Tech - Soluções em TI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5D4037;
+            --accent: #ff9800;
+            --light: #f8f4ee;
+            --dark: #2e2e2e;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-destaque {
+            display: block;
+            width: max-content;
+            background: var(--accent);
+            color: white;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .btn-destaque:hover {
+            background: #e68900;
+        }
+
+        .servicos {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 50px;
+        }
+
+        .servico {
+            margin-bottom: 30px;
+        }
+
+        .servico h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .botao-flutuante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .botao-flutuante a {
+            width: 55px;
+            height: 55px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .botao-flutuante a:hover {
+            background-color: var(--accent);
+        }
+    </style>
 </head>
 <body>
-  <header><i class="fas fa-mug-hot"></i> KaffeTech</header>
+    <header>
+        <div class="logo"><i class="fas fa-mug-hot"></i> KaffeTech</div>
+    </header>
 
-  <section class="about" id="about">
     <div class="container">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>Sobre a KaffeTech</h2>
-          <p>Com sede em Belém, a KaffeTech é especializada em suporte técnico em TI e soluções em tecnologia para empresas e profissionais. Atuamos com manutenção de computadores, implantação de infraestrutura de redes, configuração de firewall, servidores e CFTV. Também oferecemos gestão completa de TI para garantir segurança e desempenho nas operações dos nossos clientes.</p>
-          <p>Com experiência sólida em análise de sistemas, unimos conhecimento técnico e atendimento próximo para entregar soluções confiáveis e eficientes. Sua TI funcionando de forma profissional, com quem entende do assunto.</p>
-          <a href="#contact" class="btn">Entre em Contato</a>
-        </div>
-        <div class="about-image">
-          <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-            <rect x="50" y="50" width="500" height="300" rx="20" fill="#e9ecef"/>
-            <text x="150" y="220" font-size="22" fill="#5D4037" font-family="Poppins">Tecnologia que aproxima</text>
-          </svg>
-        </div>
-      </div>
+        <section class="servicos">
+            <h2>Nossos Serviços</h2>
+
+            <div class="servico">
+                <h3>Suporte Técnico Especializado</h3>
+                <p>Oferecemos suporte completo para empresas e residências com atendimento remoto e presencial.</p>
+            </div>
+
+            <div class="servico">
+                <h3>Manutenção de Computadores</h3>
+                <p>Realizamos formatação, upgrades, limpeza, substituição de peças e otimização de desempenho.</p>
+            </div>
+
+            <div class="servico">
+                <h3>Infraestrutura de Rede</h3>
+                <p>Montamos e organizamos redes cabeadas e Wi-Fi, com segurança e desempenho garantidos.</p>
+            </div>
+
+            <div class="servico">
+                <h3>Configuração de Firewalls</h3>
+                <p>Proteja seus dados com configuração avançada de firewall para empresas e residências.</p>
+            </div>
+
+            <div class="servico">
+                <h3>Gestão de TI</h3>
+                <p>Gerenciamento de toda a infraestrutura de tecnologia da sua empresa com relatórios e indicadores.</p>
+            </div>
+
+            <div class="servico">
+                <h3>Monitoramento CFTV</h3>
+                <p>Instalação e configuração de sistemas de câmeras IP com acesso remoto via aplicativo.</p>
+            </div>
+
+            <a class="btn-destaque" href="https://sistema.kaffetech.com/">Abrir Chamado Agora</a>
+        </section>
     </div>
-  </section>
 
-  <!-- Botões Fixos -->
-  <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5591983302904" target="_blank" title="Fale conosco no WhatsApp"
-       style="background-color: #25D366; color: white; padding: 12px 14px; border-radius: 50px; text-decoration: none; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px;">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/kaffetech" target="_blank" title="Siga nosso Instagram"
-       style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-              color: white; padding: 12px 14px; border-radius: 50px; text-decoration: none; font-size: 18px;
-              box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px;">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <!-- Abrir Chamado -->
-    <a href="https://sistema.kaffetech.com/" target="_blank" title="Abrir Chamado"
-       style="background-color: #5D4037; color: white; padding: 12px 20px; border-radius: 30px; font-weight: 600;
-              text-decoration: none; font-size: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.2);">
-      Abrir Chamado
-    </a>
-  </div>
-
+    <div class="botao-flutuante">
+        <a href="https://wa.me/5591983302904" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/kaffetech" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
 </body>
 </html>
