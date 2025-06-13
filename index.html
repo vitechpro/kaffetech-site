@@ -1,192 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaffe Tech - Soluções em TI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #5D4037;
-            --accent: #ff9800;
-            --light: #f8f4ee;
-            --dark: #2e2e2e;
-            --transition: all 0.3s ease;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaffeTech ☕ Soluções em Tecnologia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5c4033;
+      --accent: #ff6b00;
+      --light: #f9f5f1;
+      --dark: #2f2f2f;
+      --transition: all 0.3s ease;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      animation: fadeIn 1s ease-in;
+    }
 
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 20px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px 20px;
-            animation: fadeInUp 1s ease forwards;
-        }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
 
-        h1, h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
+    nav ul li {
+      margin: 0 15px;
+    }
 
-        .btn-destaque {
-            display: block;
-            width: max-content;
-            background: var(--accent);
-            color: white;
-            padding: 15px 25px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-        }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
 
-        .btn-destaque:hover {
-            background: #e68900;
-        }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
 
-        .servicos {
-            background: white;
-            padding: 60px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 50px;
-        }
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-        .servico {
-            margin-bottom: 30px;
-        }
+    .btn:hover {
+      background-color: var(--accent);
+      color: white;
+    }
 
-        .servico h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+    .hero {
+      background: var(--light);
+      color: var(--dark);
+      padding: 150px 20px 100px;
+      text-align: center;
+    }
 
-        .botao-flutuante {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 9999;
-        }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
 
-        .botao-flutuante a {
-            width: 55px;
-            height: 55px;
-            background-color: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            font-size: 1.3rem;
-            transition: var(--transition);
-            text-decoration: none;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
 
-        .botao-flutuante a:hover {
-            background-color: var(--accent);
-        }
-    </style>
+    .services {
+      padding: 80px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-item {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-item i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      color: white !important;
+      text-decoration: underline;
+      background: transparent !important;
+    }
+
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .botao-flutuante a {
+      width: 52px;
+      height: 52px;
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1.2rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .botao-flutuante a:hover {
+      background-color: var(--accent);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo"><i class="fas fa-mug-hot"></i> KaffeTech</div>
-    </header>
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo"><i class="fas fa-mug-hot"></i> KaffeTech</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a class="btn" href="https://kaffetech.com/sistema/login.php">Já é cliente?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero" id="home">
     <div class="container">
-        <section class="servicos">
-            <h2>Nossos Serviços</h2>
-
-            <div class="servico">
-                <h3>Suporte Técnico Especializado</h3>
-                <p>Oferecemos suporte completo para empresas e residências com atendimento remoto e presencial.</p>
-            </div>
-
-            <div class="servico">
-                <h3>Manutenção de Computadores</h3>
-                <p>Realizamos formatação, upgrades, limpeza, substituição de peças e otimização de desempenho.</p>
-            </div>
-
-            <div class="servico">
-                <h3>Infraestrutura de Rede</h3>
-                <p>Montamos e organizamos redes cabeadas e Wi-Fi, com segurança e desempenho garantidos.</p>
-            </div>
-
-            <div class="servico">
-                <h3>Configuração de Firewalls</h3>
-                <p>Proteja seus dados com configuração avançada de firewall para empresas e residências.</p>
-            </div>
-
-            <div class="servico">
-                <h3>Gestão de TI</h3>
-                <p>Gerenciamento de toda a infraestrutura de tecnologia da sua empresa com relatórios e indicadores.</p>
-            </div>
-
-            <div class="servico">
-                <h3>Monitoramento CFTV</h3>
-                <p>Instalação e configuração de sistemas de câmeras IP com acesso remoto via aplicativo.</p>
-            </div>
-
-            <a class="btn-destaque" href="https://sistema.kaffetech.com/">Abrir Chamado Agora</a>
-        </section>
+      <h1>Serviços de TI para o seu negócio</h1>
+      <p>Com a KaffeTech, você tem tecnologia, suporte e infraestrutura que funcionam.</p>
+      <a href="#contact" class="btn">Fale Conosco</a>
     </div>
+  </section>
 
-    <div class="botao-flutuante">
-        <a href="https://wa.me/5591983302904" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/kaffetech" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <section class="services" id="services">
+    <div class="container">
+      <h2>O que fazemos</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <i class="fas fa-tools"></i>
+          <h3>Suporte Técnico</h3>
+          <p>Prestamos atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas, garantindo o funcionamento contínuo do seu ambiente de TI.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-network-wired"></i>
+          <h3>Redes e Infraestrutura</h3>
+          <p>Instalação, cabeamento, roteamento e organização física da rede local e da conexão com a internet. Usamos práticas padronizadas e equipamentos de qualidade para estabilidade e performance.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-server"></i>
+          <h3>Backup e Servidores</h3>
+          <p>Montamos servidores com TrueNAS e Linux, criamos rotinas automáticas de backup e sistemas de alta disponibilidade com Nextcloud e sincronização remota via Cloudflare.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-code"></i>
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p>Desenvolvemos sistemas personalizados como plataformas de chamados, painéis de agendamento, sistemas de bilheteria, PDVs integrados e soluções sob demanda em PHP, JS e MySQL.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-cloud"></i>
+          <h3>Soluções em Nuvem</h3>
+          <p>Implantamos soluções em nuvem para empresas com sincronização automática de arquivos, acesso externo seguro, e integração com serviços como OneDrive, Google Drive e servidores privados.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-video"></i>
+          <h3>Monitoramento</h3>
+          <p>Instalamos câmeras IP com gravação local e visualização em tempo real pela web. Usamos RTSP/HLS/WebRTC e integração com sistemas de segurança locais e remotos, inclusive sem IP fixo.</p>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Vamos conversar?</h2>
+    <p>Entre em contato pelo e-mail <a href="mailto:joaovictor@kaffetech.com">joaovictor@kaffetech.com</a> ou mande um WhatsApp para <a href="https://wa.me/5591983302904">(91) 98330-2904</a>.</p>
+    <br>
+    <a href="https://kaffetech.com/sistema/login.php" class="btn">Abrir chamado</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KaffeTech <i class="fas fa-mug-hot"></i> - Todos os direitos reservados.</p>
+  </footer>
+
+  <div class="botao-flutuante">
+    <a href="https://wa.me/5591983302904" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://instagram.com/kaffetech" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://kaffetech.com/sistema/login.php" target="_blank" title="Abrir Chamado" style="background-color:#ff6b00;"><i class="fas fa-ticket-alt"></i></a>
+  </div>
+
 </body>
 </html>
