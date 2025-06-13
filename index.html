@@ -33,7 +33,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Header Mobile-First */
     header {
       background: var(--primary);
       color: white;
@@ -58,16 +57,15 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: white;
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    /* Menu Mobile */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -92,7 +90,7 @@
     }
 
     nav ul li {
-      margin: 0 10px;
+      margin: 0 15px;
     }
 
     nav ul li a {
@@ -110,15 +108,13 @@
     .btn {
       background-color: var(--primary);
       color: white;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border: none;
       border-radius: 20px;
       font-weight: 500;
       text-decoration: none;
       transition: var(--transition);
       display: inline-block;
-      font-size: 0.9rem;
-      white-space: nowrap;
     }
 
     .btn:hover {
@@ -127,13 +123,12 @@
       transform: translateY(-2px);
     }
 
-    /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(92, 64, 51, 0.9), rgba(92, 64, 51, 0.9)), url('hero-bg.jpg');
+      background: linear-gradient(rgba(92, 64, 51, 0.9), rgba(92, 64, 51, 0.9)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 150px 20px 80px;
+      padding: 180px 20px 100px;
       text-align: center;
       min-height: 100vh;
       display: flex;
@@ -142,34 +137,35 @@
     }
 
     .hero-content {
-      max-width: 600px;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
       line-height: 1.3;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .hero p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin-bottom: 30px;
       line-height: 1.6;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     }
 
-    /* Services Section */
     .services {
-      padding: 60px 20px;
+      padding: 80px 20px;
       background-color: white;
     }
 
     .section-title {
       text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
       color: var(--primary);
       position: relative;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
     }
 
     .section-title::after {
@@ -178,66 +174,91 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 60px;
+      width: 80px;
       height: 3px;
       background-color: var(--accent);
     }
 
     .service-list {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
     }
 
     .service-item {
-      background: var(--light);
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: var(--transition);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .service-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(92, 64, 51, 0.85), rgba(92, 64, 51, 0.85));
+      z-index: 1;
+    }
+
+    .service-item > * {
+      position: relative;
+      z-index: 2;
     }
 
     .service-item i {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
     }
 
     .service-item h3 {
+      font-size: 1.5rem;
       margin-bottom: 15px;
-      color: var(--primary);
-      font-size: 1.2rem;
+      color: white;
     }
 
     .service-item p {
       line-height: 1.6;
-      font-size: 0.9rem;
+      color: rgba(255,255,255,0.9);
     }
 
-    /* CTA Section */
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
     .cta {
-      background: linear-gradient(rgba(92, 64, 51, 0.9), rgba(92, 64, 51, 0.9)), url('cta-bg.jpg');
+      background: linear-gradient(rgba(92, 64, 51, 0.9), rgba(92, 64, 51, 0.9)), url('https://images.unsplash.com/photo-1581093057305-3ec4d0a4d6a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 60px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     .cta h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .cta p {
       margin-bottom: 30px;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     }
 
     .cta a {
@@ -246,28 +267,26 @@
       background: transparent !important;
     }
 
-    /* Footer */
     footer {
       background: var(--primary);
       color: white;
       text-align: center;
-      padding: 30px 20px 20px;
+      padding: 40px 20px 20px;
     }
 
-    /* Floating Buttons */
     .botao-flutuante {
       position: fixed;
       bottom: 20px;
       right: 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       z-index: 9999;
     }
 
     .botao-flutuante a {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       background-color: var(--primary);
       color: white;
       display: flex;
@@ -275,7 +294,7 @@
       justify-content: center;
       border-radius: 50%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       transition: var(--transition);
       text-decoration: none;
     }
@@ -285,50 +304,7 @@
       transform: scale(1.1);
     }
 
-    /* Media Queries para Desktop */
-    @media (min-width: 768px) {
-      .logo {
-        font-size: 1.8rem;
-      }
-      
-      nav ul li {
-        margin: 0 15px;
-      }
-      
-      nav ul li a {
-        font-size: 1rem;
-      }
-      
-      .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-      }
-      
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-      
-      .hero p {
-        font-size: 1.2rem;
-      }
-      
-      .service-list {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-      }
-      
-      .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
-      }
-      
-      .cta h2 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Menu Mobile */
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .menu-toggle {
         display: flex;
       }
@@ -358,12 +334,21 @@
         margin: 15px 0;
       }
       
-      nav ul li a {
-        font-size: 1.1rem;
+      .hero {
+        padding: 150px 20px 80px;
       }
       
-      .header-container {
-        position: relative;
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+      
+      .service-item {
+        min-height: 300px;
+        padding: 30px 20px;
       }
     }
   </style>
@@ -402,35 +387,46 @@
     <div class="container">
       <h2 class="section-title">O que fazemos</h2>
       <div class="service-list">
-        <div class="service-item">
+        <!-- Suporte Técnico -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1581093057305-3ec4d0a4d6a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-tools"></i>
           <h3>Suporte Técnico</h3>
-          <p>Prestamos atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas.</p>
+          <p>Prestamos atendimento presencial e remoto para resolver falhas em estações de trabalho, impressoras, redes e sistemas, garantindo o funcionamento contínuo do seu ambiente de TI.</p>
         </div>
-        <div class="service-item">
+        
+        <!-- Redes e Infraestrutura -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-network-wired"></i>
           <h3>Redes e Infraestrutura</h3>
-          <p>Instalação, cabeamento, roteamento e organização física da rede local e da conexão com a internet.</p>
+          <p>Instalação, cabeamento, roteamento e organização física da rede local e da conexão com a internet. Usamos práticas padronizadas e equipamentos de qualidade para estabilidade e performance.</p>
         </div>
-        <div class="service-item">
+        
+        <!-- Backup e Servidores -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-server"></i>
           <h3>Backup e Servidores</h3>
-          <p>Montamos servidores com TrueNAS e Linux, criamos rotinas automáticas de backup e sistemas de alta disponibilidade.</p>
+          <p>Montamos servidores com TrueNAS e Linux, criamos rotinas automáticas de backup e sistemas de alta disponibilidade com Nextcloud e sincronização remota via Cloudflare.</p>
         </div>
-        <div class="service-item">
+        
+        <!-- Desenvolvimento de Sistemas -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-code"></i>
           <h3>Desenvolvimento de Sistemas</h3>
-          <p>Desenvolvemos sistemas personalizados como plataformas de chamados, painéis de agendamento e PDVs integrados.</p>
+          <p>Desenvolvemos sistemas personalizados como plataformas de chamados, painéis de agendamento, sistemas de bilheteria, PDVs integrados e soluções sob demanda em PHP, JS e MySQL.</p>
         </div>
-        <div class="service-item">
+        
+        <!-- Soluções em Nuvem -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-cloud"></i>
           <h3>Soluções em Nuvem</h3>
-          <p>Implantamos soluções em nuvem para empresas com sincronização automática de arquivos e acesso externo seguro.</p>
+          <p>Implantamos soluções em nuvem para empresas com sincronização automática de arquivos, acesso externo seguro, e integração com serviços como OneDrive, Google Drive e servidores privados.</p>
         </div>
-        <div class="service-item">
+        
+        <!-- Monitoramento -->
+        <div class="service-item" style="background-image: url('https://images.unsplash.com/photo-1563770660941-10a63607739e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
           <i class="fas fa-video"></i>
           <h3>Monitoramento</h3>
-          <p>Instalamos câmeras IP com gravação local e visualização em tempo real pela web.</p>
+          <p>Instalamos câmeras IP com gravação local e visualização em tempo real pela web. Usamos RTSP/HLS/WebRTC e integração com sistemas de segurança locais e remotos, inclusive sem IP fixo.</p>
         </div>
       </div>
     </div>
